@@ -16,6 +16,9 @@ install.packages("ggpubr", repos="http://cran.us.r-project.org" )
 installed.packages("gridExtra", repos="http://cran.us.r-project.org" )
 ```
 
+# Athor:
+JIN QIU
+
 # Abstract
 
 This research aims at discovering the change of the situation of daily
