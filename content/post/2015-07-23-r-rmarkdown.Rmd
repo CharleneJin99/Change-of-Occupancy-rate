@@ -169,8 +169,14 @@ there is no enough shelter spots in ON. To fulfill the society’s needs
 for shelter spots, the government needs to make more investment.
 
 
+# Weaknesses and next steps
 
-
+Other than those factors that we have discussed at the very beginning of this 
+report, the process of data collection for year 2019 might also be biased. As
+we know, the winter in 2019 is actually warmer than that in the previous years. That might
+be a possible reason that lowers the average occupancy rate for shelters in 2019.
+It will be more rigorous if we could take more years into account or analyze the data
+with differing the seasons, which is also what I am going to do for the next step.
 
 
 
