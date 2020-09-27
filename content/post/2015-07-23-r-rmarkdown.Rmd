@@ -75,15 +75,15 @@ package <- show_package("8a6eceb2-821b-4961-a29d-758f3087732d")
 package
 
 
-resources <- list_package_resources("8a6eceb2-821b-4961-a29d-758f3087732d")
+resources <- list_package_resources("8a6eceb2-821b-4961-a29d-758f3087732d") 
 
-datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson')) # Download the data from "opendata" Toronto website.
 
-data20 <- filter(datastore_resources, row_number()==1) %>% get_resource()
+data20 <- filter(datastore_resources, row_number()==1) %>% get_resource()  # Get our data for 2020
 data20
 
 
-data19 <- filter(datastore_resources, row_number()==2) %>% get_resource()
+data19 <- filter(datastore_resources, row_number()==2) %>% get_resource()  # Get our data for 2019, we will need it for comparison.
 data19
 ```
 
@@ -122,7 +122,7 @@ shelters on running due to the shortage of funding or workforce.
 # Futhermore, how does the occupancy rate change due to the COVID-19 in year 2020 compared to year 2019?
 
 ```{r plots, echo=FALSE}
-ratio19= data19$OCCUPANCY/data19$CAPACITY
+ratio19= data19$OCCUPANCY/data19$CAPACITY # This is how we calculated the occupancy rate
 ratio20= data20$OCCUPANCY/data20$CAPACITY
 par(mfrow=c(1,2))
 plot(data19$CAPACITY,data19$OCCUPANCY)
@@ -134,10 +134,10 @@ abline(lmod20)
 
 ```
 
-This two plots show that there might be some postive linear relationship
+This two plots show that there might be some positive linear relationship
 between capacity and occupancy. We can conclude that the variance of the
 data in 2020 is larger than that of 2019. This means, the situations may
-vary from diffrent shelters in 2020.
+vary from different shelters in 2020.
 
 ```{r}
 summary(ratio19)
