@@ -1,5 +1,5 @@
 ---
-title: "How does the daily occupancy rate of ON shelters change under the strike of COVID-19?"
+title: "How does the daily occupancy rate of ON shelters change under the shock of COVID-19?"
 author: "JIN QIU"
 date: 2020-09-23T21:13:14-05:00
 categories: ["R"]
@@ -21,17 +21,17 @@ JIN QIU
 
 # Abstract
 
-This research aims at discovering the change of the situation of daily
-shelters in ON due to the strike of COVID-19. The analysis is based on
+This research aims at discovering the change of the situations of daily
+shelters in ON due to the shock of COVID-19. The analysis is based on
 the comparison between the data from year 2020 and year 2019, and will
 especially focus on the changes in occupancy rate. The most important
-finding is that the average occupancy rate has decreased, while the
+finding is that the average occupancy rate has decreased in 2020, while the
 situation of overwhelmed shelter is even more severe.
 
 # Introduction
 
-In year 2020, due to the strike of COVID-19, the Ontario government has
-required everyone to keep the social distance and reduce the frequency
+In year 2020, due to the influence of COVID-19, the Ontario government has
+required everyone to keep social distancing and reduce the frequency
 of going out to stop the spread of COVID-19. That means, all the
 homeless people on the street has to go to a shelter. That makes me get
 curious: will there be more shelters in Ontario to host all the homeless
@@ -39,31 +39,31 @@ people compared to last year? Are there enough spots in those shelters?
 To answer the questions, I did a statistical research and find out that
 there might not be enough shelters in Ontario.
 
-From the analysis, I find out that the number of shelters that are under
-performance this year is even less than the number of last year(2019),
+From the analysis, I noticed that the number of shelters that are in
+operation this year is less than the number of last year(2019),
 along with a decrease in the occupancy rate. The average occupancy rate
 in 2019 is 0.9559, while that in 2020 is 0.7981. ALthough the situation
-of a overwhelmed shelter has existed since last year, the highest
+of a overwhelmed shelter has been happening since last year, the highest
 occupancy rate in ON this year for a single shelter has arrived 4.05,
-which is almost 3 times of that in last year. This means, the use ratio
+which is almost 3 times of that in last year. This indicates that the use ratio
 of the shelters is below the average during the period of COVID-19, and
 there are not enough available spots provided in the shelter.
 
-During the process of the analyzing the occupancy rate, we are using the
+During the process of analyzing the occupancy rate, we are using the
 data from OPENDATA Toronto. And they collect the information of all the
 shelters in Ontario everyday at 4 a.m. However, since I am doing the
-research in the middle of 2020, the data I am using only covered that
+research in the middle of 2020, the data I am using only covered the
 past 9 months, that may cause some mistake when I use the data to do the
 comparison and analysis. For example, there might be more homeless
 people in the shelter in winter due to the weather, and the average
-ratio might be underestimated with the use of current data. Another
+ratio might be underestimated with using the current data. Another
 possible error is, when I am doing the research, neither the data from
-2020 or the data from 2019 is selected randomly, I literally used all
+2020 or the data from 2019 is selected randomly, I simply used all
 the data points that I am provided with. The conclusion that I can draw
 from the current data is there is not enough spots in the shelters of ON
 for the past 9 months, and the government should invest more to make
 sure that all the homeless can stay safe in a shelter during this
-special period . I will continue to do the research and decide how many
+special period. I will continue to do the research and decide how many
 more shelters and spots should be provided in the future.
 
 ```{r,include=FALSE,echo=FALSE}
@@ -116,10 +116,10 @@ From the plot above, we can conclude that the shelter provided for all
 sectors has decreased this year more or less. There might be various
 reasons for this situation, one of the most possible reason is that
 COVID-19 has made it difficult for the government to hold all the
-shelters on running due to the shortage of funding or workforce.
+shelters on running(because of the shortage workforce or other reasons).
 
 
-# Futhermore, how does the occupancy rate change due to the COVID-19 in year 2020 compared to year 2019?
+# Futhermore, how does the occupancy rate change due to the COVID-19, compared to that in year 2019?
 
 ```{r plots, echo=FALSE}
 ratio19= data19$OCCUPANCY/data19$CAPACITY # This is how we calculated the occupancy rate
@@ -136,8 +136,8 @@ abline(lmod20)
 
 This two plots show that there might be some positive linear relationship
 between capacity and occupancy. We can conclude that the variance of the
-data in 2020 is larger than that of 2019. This means, the situations may
-vary from different shelters in 2020.
+data in 2020 is larger than that of 2019. This means, the differences in the situation 
+of different shelters in 2020 is largers.
 
 ```{r}
 summary(ratio19)
@@ -152,8 +152,8 @@ hist(ratio20)
 
 From the chart and the histograms above, it is not hard to conclude that
 the average occupancy rate in year 2020 is about 20% lower than that in
-2020. In specific, the histogram for year 2020 is hardly right-skewed,
-while we could say the histogram for year 2019 is slightly right-skewed.
+2019. In specific, the histogram for year 2020 is hardly right-skewed,
+while we could say the histogram for year 2019 is only slightly right-skewed.
 Although they both peak at a occupancy ratio=1, there are more extreme
 data points in year 2020 compared to year 2019. This could lead to a
 conclusion that although the shelters almost reach their maximum
@@ -175,8 +175,8 @@ Other than those factors that we have discussed at the very beginning of this
 report, the process of data collection for year 2019 might also be biased. As
 we know, the winter in 2019 is actually warmer than that in the previous years. That might
 be a possible reason that lowers the average occupancy rate for shelters in 2019.
-It will be more rigorous if we could take more years into account or analyze the data
-with differing the seasons, which is also what I am going to do for the next step.
+The analysis will be more accurate if we could take more years into account or analyzing the data
+with a partition of the seasons, and that is what I am going to do for the further research.
 
 
 
